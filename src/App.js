@@ -2,9 +2,12 @@ import React from 'react';
 import {
   View,
   Image,
+  Text,
+  Button,
   SafeAreaView
 } from 'react-native';
 import styles from "./Styles";
+import strings from './Strings';
 import CheckboxWithLabel from './components/Checkbox';
 
 
@@ -21,6 +24,11 @@ const App = () =>{
         <CheckboxWithLabel label="Remember me"/>
         <CheckboxWithLabel label="ADFS Login"/>
 
+        <Text
+          style={[styles.baseHeader, {marginTop: 30}]}>{strings.LoginSSOMessage}</Text>
+        <Button
+          title={strings.ssoButtonTitle}
+          style={styles.ssoButton}/>
       </View>
     </SafeAreaView>
     

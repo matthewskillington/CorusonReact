@@ -4,6 +4,7 @@ import {
 
 const palette = {
     ApplicationFrameColour: "#232D2F",
+    PrimaryColor: "#00D1B2",
     TextColor: "#FFFFFF"
 }
 
@@ -25,6 +26,12 @@ const styles = StyleSheet.create({
       marginTop: 6
     },
 
+    baseHeader: {
+      fontSize: 20,
+      fontWeight: "bold",
+      color: palette.TextColor
+    },
+
     logoImage: {
       height: 45,
       width: 133,
@@ -42,7 +49,13 @@ const styles = StyleSheet.create({
 
     switch: {
       marginLeft: 'auto'
-      
+    },
+    
+    ssoButton: {
+      width: "100%",
+      backgroundColor: palette.PrimaryColor,
+      color: palette.TextColor,
+      marginTop: 40
     }
 
 
