@@ -13,6 +13,12 @@ import CheckboxWithLabel from './components/Checkbox';
 import Divider from './components/Divider';
 
 class App extends React.Component {
+
+  state = {
+    username: '',
+    password: ''
+  };
+
   render() {
     return (
       <SafeAreaView
@@ -41,16 +47,23 @@ class App extends React.Component {
           <Text
             style={[styles.baseText, {alignSelf: 'flex-start', marginBottom: 10}]}>{strings.usernameLabel}</Text>
           <TextInput
-            style={[styles.textInput, {marginBottom: 20}]}/>
+            autoCapitalize='none'
+            style={[styles.textInput, {marginBottom: 20}]}
+            onChangeText={(value) => this.setState({username: value})}
+            value={this.state.username}/>
   
           <Text
             style={[styles.baseText, {alignSelf: 'flex-start', marginBottom: 10}]}>{strings.passwordLabel}</Text>
           <TextInput
-            style={styles.textInput}/>
+            autoCapitalize='none'
+            secureTextEntry={true}
+            style={styles.textInput}
+            onChangeText={(value) => this.setState({password: value})}
+            value={this.state.password}/>
   
           <TouchableOpacity
             style={styles.ssoButton}
-            onPressOut={this.onLogin}>
+            onPressOut={() => this.onLogin(this.state.username, this.state.password)}>
             <Text style={styles.ssoButtonTitle}>{strings.loginButton}</Text>
           </TouchableOpacity>
         </View>
@@ -58,7 +71,7 @@ class App extends React.Component {
     );
   }
 
-  onLogin = async function()
+  async onLogin(username, password)
   {
     try
     {
@@ -71,14 +84,13 @@ class App extends React.Component {
         },
         body: JSON.stringify(
         {
-          "emailAddressOrUsername": this.username,
-          "password": this.password,
+          "emailAddressOrUsername": username,
+          "password": password,
           "deviceId": "1234",
           "windowsAuth": false
         })
       });
-  
-      console.info(response);
+
       let responseJson = await response.json();
       console.info(responseJson);
     }
