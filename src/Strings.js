@@ -1,4 +1,6 @@
 import LocalizedStrings from 'react-native-localization';
+import es from './Strings.es';
+
 
 let strings = new LocalizedStrings({
     "en-US": {
@@ -12,17 +14,8 @@ let strings = new LocalizedStrings({
         passwordLabel: "Password:",
         loginButton: "LOGIN"
     },
-    "es": {
-        LoginSSOMessage: "Inicie sesión a través de SSO",
-        ssoButtonTitle: "Ideagen365Test",
-        adfsLogin: "ADFS Iniciar sesión",
-        rememberMe: "Recuérdame",
-        orLabel: "o",
-        loginCoruson: "Inicie sesión a través de la cuenta Coruson",
-        usernameLabel: "Nombre de usuario",
-        passwordLabel: "Contraseña",
-        loginButton: "Iniciar sesión"
-    }
+    "es": es
+    
 });
 
 export default strings;
