@@ -3,25 +3,50 @@ import {
   } from 'react-native';
 
 const palette = {
-    ApplicationFrameColour: "#232D2F"
+    ApplicationFrameColour: "#232D2F",
+    TextColor: "#FFFFFF"
 }
 
 const styles = StyleSheet.create({
-    page : {
+    safeArea: {
+      backgroundColor: palette.ApplicationFrameColour
+    },
+
+    appFrame : {
       backgroundColor: palette.ApplicationFrameColour,
       height: "100%",
-      width: "100%"
+      width: "100%",
+      alignItems: 'center'
     },
-    topSection: {
-      height: 200,
+
+    baseText: {
+      fontSize: 14,
+      color: palette.TextColor,
+      marginTop: 6
+    },
+
+    logoImage: {
+      height: 45,
+      width: 133,
+      marginTop: 40,
+      marginBottom: 20
       
     },
-    header: {
-      color: 'red',
-      marginTop: 50,
-      textAlign: "center"
+
+    checkboxWrapper: {
+      display: 'flex',
+      flexDirection: 'row',
+      marginTop: 30,
+      width: 180
+    },
+
+    switch: {
+      marginLeft: 'auto'
       
     }
+
+
+
   });
 
   export default styles;

@@ -1,26 +1,28 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {
   View,
-  StyleSheet,
-  Text
+  Image,
+  SafeAreaView
 } from 'react-native';
 import styles from "./Styles";
+import CheckboxWithLabel from './components/Checkbox';
 
 
 
 const App = () =>{
   return (
-    <>
+    <SafeAreaView
+      style={styles.safeArea}>
       <View
-      style={styles.page}>
-        <View
-          style={styles.topSection}>
-          <Text
-          style={styles.header}>Page one</Text>
-        </View>
+      style={styles.appFrame}>
+        <Image 
+          style={styles.logoImage}
+          source={require('./assets/logo.png')}/>
+        <CheckboxWithLabel label="Remember me"/>
+        <CheckboxWithLabel label="ADFS Login"/>
+
       </View>
-      
-    </>
+    </SafeAreaView>
     
   );
 }
