@@ -21,8 +21,8 @@ const App = () =>{
         <Image 
           style={styles.logoImage}
           source={require('./assets/logo.png')}/>
-        <CheckboxWithLabel label="Remember me"/>
-        <CheckboxWithLabel label="ADFS Login"/>
+        <CheckboxWithLabel label={strings.rememberMe}/>
+        <CheckboxWithLabel label={strings.adfsLogin}/>
 
         <Text
           style={[styles.baseHeader, {marginTop: 30}]}>{strings.LoginSSOMessage}</Text>
