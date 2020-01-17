@@ -3,21 +3,21 @@ import {
   View,
   Image,
   Text,
-  Button,
-  SafeAreaView
+  SafeAreaView,
+  TouchableOpacity,
+  TextInput
 } from 'react-native';
 import styles from "./Styles";
 import strings from './Strings';
 import CheckboxWithLabel from './components/Checkbox';
-
-
+import Divider from './components/Divider';
 
 const App = () =>{
   return (
     <SafeAreaView
       style={styles.safeArea}>
       <View
-      style={styles.appFrame}>
+        style={styles.appFrame}>
         <Image 
           style={styles.logoImage}
           source={require('./assets/logo.png')}/>
@@ -26,16 +26,35 @@ const App = () =>{
 
         <Text
           style={[styles.baseHeader, {marginTop: 30}]}>{strings.LoginSSOMessage}</Text>
-        <Button
-          title={strings.ssoButtonTitle}
-          style={styles.ssoButton}/>
+        <TouchableOpacity
+          style={styles.ssoButton}>
+          <Text style={styles.ssoButtonTitle}>{strings.ssoButtonTitle}</Text>
+        </TouchableOpacity>
+
+        <Divider style={{marginTop: 75}} />
+        <Text
+          style={styles.baseText}>{strings.orLabel}</Text>
+        <Text
+          style={[styles.baseHeader, {marginVertical: 30, fontSize: 14}]}>{strings.loginCoruson}</Text>
+
+        <Text
+          style={[styles.baseText, {alignSelf: 'flex-start'}]}>{strings.usernameLabel}</Text>
+        <TextInput
+          style={styles.textInput}/>
+
+        <Text
+          style={[styles.baseText, {alignSelf: 'flex-start'}]}>{strings.passwordLabel}</Text>
+        <TextInput
+          style={styles.textInput}/>
+
+        <TouchableOpacity
+          style={styles.ssoButton}>
+          <Text style={styles.ssoButtonTitle}>{strings.loginButton}</Text>
+        </TouchableOpacity>
       </View>
     </SafeAreaView>
     
   );
 }
-
-
-
 
 export default App;

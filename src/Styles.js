@@ -5,7 +5,9 @@ import {
 const palette = {
     ApplicationFrameColour: "#232D2F",
     PrimaryColor: "#00D1B2",
-    TextColor: "#FFFFFF"
+    TextColor: "#FFFFFF",
+    FieldBorderColor: "#39454B",
+    FieldBackgroundColor: "#4D5A60"
 }
 
 const styles = StyleSheet.create({
@@ -17,7 +19,8 @@ const styles = StyleSheet.create({
       backgroundColor: palette.ApplicationFrameColour,
       height: "100%",
       width: "100%",
-      alignItems: 'center'
+      alignItems: 'center',
+      padding: 16
     },
 
     baseText: {
@@ -53,12 +56,36 @@ const styles = StyleSheet.create({
     
     ssoButton: {
       width: "100%",
+      height: 50,
       backgroundColor: palette.PrimaryColor,
       color: palette.TextColor,
-      marginTop: 40
+      marginTop: 40,
+      borderRadius: 2,
+      justifyContent: "center",
+      alignItems: "center"
+    },
+    
+    ssoButtonTitle: 
+    {
+      color: palette.ApplicationFrameColour,
+      fontSize: 20,
+      fontWeight: 'bold'
+    },
+
+    divider: {
+      backgroundColor: 'white',
+      height: 1,
+      width: '100%',
+      marginVertical: 8
+    },
+
+    textInput: {
+      height: 40,
+      width: '100%',
+      borderColor: palette.FieldBorderColor,
+      borderWidth: 1,
+      backgroundColor: palette.FieldBackgroundColor
     }
-
-
 
   });
 
