@@ -12,7 +12,8 @@
   "dependencies": {
     "react": "16.9.0",
     "react-native": "0.61.5",
-    "react-native-localization": "^2.1.6"
+    "react-native-localization": "^2.1.6",
+    "react-native-simple-toast": "^1.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",

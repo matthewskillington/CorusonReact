@@ -11,6 +11,7 @@ import styles from "./Styles";
 import strings from './Strings';
 import CheckboxWithLabel from './components/Checkbox';
 import Divider from './components/Divider';
+import Toast from 'react-native-simple-toast';
 
 class App extends React.Component {
 
@@ -93,6 +94,8 @@ class App extends React.Component {
 
       let responseJson = await response.json();
       console.info(responseJson);
+
+      Toast.show('AuthToken: ' + responseJson.ApiAuthenticationToken);
     }
     catch (error) 
     {
