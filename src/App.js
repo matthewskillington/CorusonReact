@@ -33,17 +33,17 @@ const App = () =>{
 
         <Divider style={{marginTop: 75}} />
         <Text
-          style={styles.baseText}>{strings.orLabel}</Text>
+          style={[styles.baseText, styles.orLabel]}>{strings.orLabel}</Text>
         <Text
           style={[styles.baseHeader, {marginVertical: 30, fontSize: 14}]}>{strings.loginCoruson}</Text>
 
         <Text
-          style={[styles.baseText, {alignSelf: 'flex-start'}]}>{strings.usernameLabel}</Text>
+          style={[styles.baseText, {alignSelf: 'flex-start', marginBottom: 10}]}>{strings.usernameLabel}</Text>
         <TextInput
-          style={styles.textInput}/>
+          style={[styles.textInput, {marginBottom: 20}]}/>
 
         <Text
-          style={[styles.baseText, {alignSelf: 'flex-start'}]}>{strings.passwordLabel}</Text>
+          style={[styles.baseText, {alignSelf: 'flex-start', marginBottom: 10}]}>{strings.passwordLabel}</Text>
         <TextInput
           style={styles.textInput}/>
 

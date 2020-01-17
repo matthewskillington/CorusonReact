@@ -85,8 +85,17 @@ const styles = StyleSheet.create({
       borderColor: palette.FieldBorderColor,
       borderWidth: 1,
       backgroundColor: palette.FieldBackgroundColor
+    },
+
+    orLabel: {
+      marginTop: -18,
+      textAlign: "center",
+      backgroundColor: palette.ApplicationFrameColour,
+      height: 20,
+      width: 40
     }
 
   });
 
-  export default styles;
+export default styles;
+  
