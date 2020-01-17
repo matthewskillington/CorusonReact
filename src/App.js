@@ -8,7 +8,7 @@ import styles from "./Styles";
 
 
 
-const HelloWorldApp = () =>{
+const App = () =>{
   return (
     <>
       <View
@@ -28,4 +28,4 @@ const HelloWorldApp = () =>{
 
 
 
-export default HelloWorldApp;
+export default App;
