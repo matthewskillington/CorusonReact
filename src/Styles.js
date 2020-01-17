@@ -82,9 +82,11 @@ const styles = StyleSheet.create({
     textInput: {
       height: 40,
       width: '100%',
+      paddingHorizontal: 8,
       borderColor: palette.FieldBorderColor,
       borderWidth: 1,
-      backgroundColor: palette.FieldBackgroundColor
+      backgroundColor: palette.FieldBackgroundColor,
+      color: 'white'
     },
 
     orLabel: {
