@@ -1,14 +1,19 @@
 import {
     StyleSheet,
   } from 'react-native';
+import DarkTheme from './themes/DarkTheme';
+import LightTheme from './themes/LightTheme';
 
-const palette = {
+const palette = DarkTheme;
+
+/*{
     ApplicationFrameColour: "#232D2F",
     PrimaryColor: "#00D1B2",
-    TextColor: "#FFFFFF",
+    MasterGrey100: "#FFFFFF",
     FieldBorderColor: "#39454B",
-    FieldBackgroundColor: "#4D5A60"
-}
+    FieldBackgroundColor: "#4D5A60",
+    MasterGrey100: "#FFFFFF"
+}*/
 
 const styles = StyleSheet.create({
     safeArea: {
@@ -25,22 +30,22 @@ const styles = StyleSheet.create({
 
     baseText: {
       fontSize: 14,
-      color: palette.TextColor,
+      color: palette.MasterGrey100,
       marginTop: 6
     },
 
     baseHeader: {
       fontSize: 20,
       fontWeight: "bold",
-      color: palette.TextColor
+      color: palette.MasterGrey100
     },
 
     logoImage: {
       height: 45,
       width: 133,
       marginTop: 40,
-      marginBottom: 20
-      
+      marginBottom: 20,
+      tintColor: palette.LogoImageColor
     },
 
     checkboxWrapper: {
@@ -58,7 +63,7 @@ const styles = StyleSheet.create({
       width: "100%",
       height: 50,
       backgroundColor: palette.PrimaryColor,
-      color: palette.TextColor,
+      color: palette.MasterGrey100,
       marginTop: 40,
       borderRadius: 2,
       justifyContent: "center",
@@ -73,7 +78,7 @@ const styles = StyleSheet.create({
     },
 
     divider: {
-      backgroundColor: 'white',
+      backgroundColor: palette.MasterGrey100,
       height: 1,
       width: '100%',
       marginVertical: 8
@@ -86,7 +91,7 @@ const styles = StyleSheet.create({
       borderColor: palette.FieldBorderColor,
       borderWidth: 1,
       backgroundColor: palette.FieldBackgroundColor,
-      color: 'white'
+      color: palette.MasterGrey100
     },
 
     orLabel: {
